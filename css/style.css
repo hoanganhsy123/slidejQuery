@@ -1,0 +1,92 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.container {
+    top: 200px;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background: coral;
+}
+.slides {
+    width:  100%;
+    height:  700px;
+    overflow:  hidden;
+}
+.slide {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+.slide.active{
+    opacity:  1;
+    visibility:  visible;	
+}
+.nut-slide span{
+	color: rgb(167, 50, 50);
+	font-size: 60px;
+	opacity: 0.6;
+}
+span.previous{
+	position: absolute;
+	top: 42%;
+	left: 0%;
+	z-index: 10;
+}
+span.next{
+	position: absolute;
+	top: 42%;
+	right: 0%;
+	z-index: 10;
+}
+
+.hidden-left{
+    animation: hidden-left forwards;
+}
+@-webkit-keyframes hidden-left{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+.next-slide-right{
+    animation: next-slide-right forwards;
+}
+@-webkit-keyframes next-slide-right{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+/*xử lý nút prev*/
+.hidden-right{
+    animation: hidden-right forwards;
+}
+@-webkit-keyframes hidden-right{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(100%);
+    }
+}
+.next-slide-left{
+    animation: next-slide-left forwards;
+}
+@-webkit-keyframes next-slide-left{
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
